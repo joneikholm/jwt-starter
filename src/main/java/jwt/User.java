@@ -10,6 +10,7 @@ public class User {
     private Long id;
     private String username;
     private String password; // the bcrypt hash, never the clear-text password
+    private String role = "user"; // "user" or "admin"
 
     public User() {
     }
@@ -25,5 +26,13 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
